@@ -5,19 +5,18 @@ boolean redo = true;
 void setup() {
   size(1200, 600);
 
-  background(#0000AA);
-
   stroke(#FFFFFF);
   strokeWeight(5);
 
-
-  h = random(100, 600);
-  slope = random(-10, 10);
 }
 
 void draw() {
 
   if (redo == true) {
+    
+    background(#0000AA);
+    h = random(100, 600);
+    slope = random(-10, 10);
 
     for (int i = 0; i<1201; i++) {
 
@@ -37,4 +36,15 @@ void draw() {
     }
   }
   redo = false;
+}
+
+void keyPressed(){
+  
+ redo=true;
+  
+}
+void keyReleased(){
+  
+ redo=false; 
+  
 }
